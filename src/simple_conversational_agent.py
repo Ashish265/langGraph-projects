@@ -39,7 +39,7 @@ chain_with_history = RunnableWithMessageHistory(
 #Example usage
 session_id = "user_123"
 
-#Print the conversation history
+
 response1 = chain_with_history.invoke(
     {"input": "Hello! How are you?"},
     config={"configurable": {"session_id": session_id}}
@@ -52,6 +52,7 @@ response2 = chain_with_history.invoke(
 )
 print("AI:", response2.content)
 
+##Print the conversation history
 print("\nConversation History:")
 for message in store[session_id].messages:
     print(f"{message.type}: {message.content}")
