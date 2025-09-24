@@ -180,7 +180,7 @@ def running_agent():
 
         result = rag_agent.invoke({"messages": messages})
 
-        print("\n=== ANSWER ===")
+        print("\n====== ANSWER =====")
         print(result['messages'][-1].content)
 
 
